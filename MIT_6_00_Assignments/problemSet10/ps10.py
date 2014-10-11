@@ -221,7 +221,7 @@ def test(points, k = 200, cutoff = 0.1):
 
 
 points = buildCountyPoints('counties.txt')
-##random.seed(123)
+random.seed(123)
 testPoints = random.sample(points, len(points)/10)
 
 
@@ -272,7 +272,7 @@ def graphRemovedErr(points, kvals = [25, 50, 75, 100, 125, 150], cutoff = 0.1):
     pylab.plot(ratioSet)
     pylab.show()
 
-##graphRemovedErr(points)
+graphRemovedErr(points)
 def myCounty(county):
     for i in range(0,3):
         clusterSet, maxDist = kmeans(points, 50,.1, County)

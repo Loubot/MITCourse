@@ -130,6 +130,7 @@ def bruteForceSearch(graph,start,end,maxTotalDist,maxDistOutdoors,visited = [],d
         path = path + shortest
         retPathDist = dist + bestDist
         retOutDist = outDist + bestOutDist
+
     return path, retPathDist,retOutDist
 
 
@@ -197,40 +198,40 @@ if __name__ == '__main__':
     print "Expected: ", expectedPath2
     print "Brute-force: ", brutePath2
     print "DFS: ", dfsPath2
+
+    # Test case 3
+    print "---------------"
+    print "Test case 3:"
+    print "Find the shortest-path from Building 2 to 9"
+    expectedPath3 = ['2', '3', '7', '9']
+    brutePath3 = bruteForceSearch(digraph, '2', '9', LARGE_DIST, LARGE_DIST)
+    dfsPath3 = directedDFS(digraph, '2', '9', LARGE_DIST, LARGE_DIST)
+    print "Expected: ", expectedPath3
+    print "Brute-force: ", brutePath3
+    print "DFS: ", dfsPath3
 ##
-##    # Test case 3
-##    print "---------------"
-##    print "Test case 3:"
-##    print "Find the shortest-path from Building 2 to 9"
-##    expectedPath3 = ['2', '3', '7', '9']
-##    brutePath3 = bruteForceSearch(digraph, '2', '9', LARGE_DIST, LARGE_DIST)
-##    dfsPath3 = directedDFS(digraph, '2', '9', LARGE_DIST, LARGE_DIST)
-##    print "Expected: ", expectedPath3
-##    print "Brute-force: ", brutePath3
-##    print "DFS: ", dfsPath3
-##
-##    # Test case 4
-##    print "---------------"
-##    print "Test case 4:"
-##    print "Find the shortest-path from Building 2 to 9 without going outdoors"
-##    expectedPath4 = ['2', '4', '10', '13', '9']
-##    brutePath4 = bruteForceSearch(digraph, '2', '9', LARGE_DIST, 0)
-##    dfsPath4 = directedDFS(digraph, '2', '9', LARGE_DIST, 0)
-##    print "Expected: ", expectedPath4
-##    print "Brute-force: ", brutePath4
-##    print "DFS: ", dfsPath4
-##
-##    # Test case 5
-##    print "---------------"
-##    print "Test case 5:"
-##    print "Find the shortest-path from Building 1 to 32"
-##    expectedPath5 = ['1', '4', '12', '32']
-##    brutePath5 = bruteForceSearch(digraph, '1', '32', LARGE_DIST, LARGE_DIST)
-##    dfsPath5 = directedDFS(digraph, '1', '32', LARGE_DIST, LARGE_DIST)
-##    print "Expected: ", expectedPath5
-##    print "Brute-force: ", brutePath5
-##    print "DFS: ", dfsPath5
-##
+    # Test case 4
+    print "---------------"
+    print "Test case 4:"
+    print "Find the shortest-path from Building 2 to 9 without going outdoors"
+    expectedPath4 = ['2', '4', '10', '13', '9']
+    brutePath4 = bruteForceSearch(digraph, '2', '9', LARGE_DIST, 0)
+    dfsPath4 = directedDFS(digraph, '2', '9', LARGE_DIST, 0)
+    print "Expected: ", expectedPath4
+    print "Brute-force: ", brutePath4
+    print "DFS: ", dfsPath4
+
+    # Test case 5
+    print "---------------"
+    print "Test case 5:"
+    print "Find the shortest-path from Building 1 to 32"
+    expectedPath5 = ['1', '4', '12', '32']
+    brutePath5 = bruteForceSearch(digraph, '1', '32', LARGE_DIST, LARGE_DIST)
+    dfsPath5 = directedDFS(digraph, '1', '32', LARGE_DIST, LARGE_DIST)
+    print "Expected: ", expectedPath5
+    print "Brute-force: ", brutePath5
+    print "DFS: ", dfsPath5
+
 ##    # Test case 6
 ##    print "---------------"
 ##    print "Test case 6:"
